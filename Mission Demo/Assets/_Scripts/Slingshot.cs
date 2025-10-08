@@ -8,6 +8,7 @@ public class Slingshot : MonoBehaviour
     [Header("Inscribed")]
     public GameObject projectilePrefab;
     public float velocityMult = 10f;
+    public GameObject projLinePrefab;
 
     //fields set dynamically
     [Header("Dynamic")]
@@ -79,6 +80,8 @@ public class Slingshot : MonoBehaviour
             projRB.isKinematic = false;
             projRB.collisionDetectionMode = CollisionDetectionMode.Continuous;
             FollowCam.POI = projectile;
+            //Add a ProjectileLine to the Projectile
+            Instantiate<GameObject>(projLinePrefab, projectile.transform);
             projRB.velocity = -mouseDelta * velocityMult;
             projectile = null;
         }
