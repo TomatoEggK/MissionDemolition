@@ -17,6 +17,8 @@ public class Goal : MonoBehaviour
             Color c = mat.color;
             c.a = 0.75f;
             mat.color = c;
+
+            Projectile.DESTROY_PROJECTILES();
         }
     }
 }

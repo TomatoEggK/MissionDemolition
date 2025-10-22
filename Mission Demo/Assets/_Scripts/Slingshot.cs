@@ -84,7 +84,7 @@ public class Slingshot : MonoBehaviour
             Instantiate<GameObject>(projLinePrefab, projectile.transform);
             projRB.velocity = -mouseDelta * velocityMult;
 
-            FollowCam.SWITCH_VIEW(FollowCam.eView.slingshot);
+//FollowCam.SWITCH_VIEW(FollowCam.eView.slingshot);
 
             projectile = null;
             MissionDemolition.SHOT_FIRED();
